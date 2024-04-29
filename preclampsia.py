@@ -55,6 +55,10 @@ st.title('Fundación Valle del Lili')
 # %% Graficos
 tab1, tab2, tab3, tab4, tab5= st.tabs(["Descenlace de pacientes con Morbilidad Materna Extrema", "Comparación del número de pacientes con Morbilidad Materna Extrema (MME)", "Distribución de edades de pacientes con Morbilidad Materna Extrema", "Distribución de frecuencia cardíaca en pacientes con Morbilidad Materna Extrema", "Distribución de frecuencia cardíaca en pacientes con Morbilidad Materna Extrema"])
 with tab1:
+    # Preparar los datos para el diagrama de torta
+    labels = ['Eclampsia', 'Muerte materna']
+    sizes = [num_pacientes_eclampsia, num_pacientes_muerte_materna]
+    colors = ['#ff9999', '#66b3ff']
     # Grafico 1: Estado de la útlima cita, porcentaje de asistencia e inasistencia en la base de datos
     st.write("## Descenlace de pacientes con Morbilidad Materna Extrema")
     # Crear el gráfico de torta
